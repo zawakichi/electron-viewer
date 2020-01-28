@@ -1,0 +1,189 @@
+body {
+  /* background-color: black; */
+  background-color: black;
+  margin: 0px;
+  overflow: hidden;
+}
+button {
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+}
+button:focus {
+  outline: 0;
+}
+label {
+  color: white;
+  display: block;
+  float: left;
+  font-size: small;
+  width: 40%;
+}
+pre {
+  color: white;
+  font-size: small;
+  margin: 0px;
+}
+input {
+  margin: 0px;
+  width: 60%;
+  font-size: x-small;
+}
+ul {
+  color: white;
+  margin: 0px;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+}
+#sub-container {
+  background-color: black;
+  height: 100%;
+  position: relative;
+}
+/* #id_text {
+  pointer-events  
+} */
+#x_text {
+  pointer-events: none;
+}
+#y_text {
+  pointer-events: none;
+}
+
+/* 十字カーソルボタン */
+.move-button-grid {
+  bottom: 3%;
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-rows: 30px 30px 30px;
+  position: absolute;
+  left: 2%;
+}
+.move-button-grid button{
+  border: rgba(158, 158, 158, 1) 4px;
+  background-color: rgba(158, 158, 158, 0.7);
+  border-radius: 50%;
+  color: orange;
+  font: bold;
+  height: 30px;
+  margin: 0px;
+  width: 30px;
+}
+.move-button-grid button:hover{
+  border: solid 1px orange;
+  background-color: orange;
+  color: black;
+  transition: .4s;
+  display: inline-block;
+}
+.move-button-grid button:disabled{
+  background-image: none;
+  background-color: #ccc;
+  border-color: #ccc;
+  color: black;
+  opacity: 0.2;
+}
+.move-button-grid .position-top {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+.move-button-grid .position-bottom {
+  grid-column: 2 / 3;
+  grid-row: 3 / 3;
+  transform: rotate(-180deg);
+}
+.move-button-grid .position-left {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  transform: rotate(-90deg);
+}
+.move-button-grid .position-right {
+  grid-column: 3 / 3;
+  grid-row: 2 / 3;
+  transform: rotate(90deg);
+}
+
+/* ズームボタン */
+.zoom-button-grid {
+  bottom: 3%;
+  display: grid;
+  grid-template-columns: 30px;
+  grid-template-rows: 30px 30px 30px;
+  position: absolute;
+  right: 2%;
+}
+
+.zoom-button-grid .position-top {
+  grid-row: 1 / 3;
+}
+.zoom-button-grid .position-buttom {
+  grid-row: 3 / 3;
+}
+.zoom-button-grid button{
+  border: rgba(158, 158, 158, 1) 4px;
+  background-color: rgba(158, 158, 158, 0.5);
+  border-radius: 50%;
+  color: black;
+  font: bold;
+  height: 30px;
+  margin: 0px;
+  width: 30px;
+}
+.zoom-button-grid button:hover{
+  border: solid 1px orange;
+  background-color: orange;
+  transition: .4s;
+  display: inline-block;
+}
+
+.side-map-tab {
+  background-color: black;
+  color: aliceblue;
+  height: 3%;
+  right: 0%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 25%;
+}
+.side-map {
+  background-color: black;
+  height: 30%;
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  top: 3%;
+  width: 25%;
+}
+.side-control-tab {
+  background-color: black;
+  color: aliceblue;
+  height: 3%;
+  right: 0%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 18%;
+}
+.side-control {
+  background-color: black;
+  height: 42%;
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  top: 3%;
+  width: 18%;
+}
+
+.tooltip {
+  background-color: rgb(170, 170, 170);
+  border-radius: 3px;
+  display: none;
+  height: 80px;
+  position: absolute;
+  width: 120px;
+  z-index: 2;
+}

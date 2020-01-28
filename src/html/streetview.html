@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>StreetView</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div class="side-map-tab" onclick="displayPain()">map</div>
+    <div id="side-pain" class="side-map" >
+      <div class="tooltip" id="tooltip"></div>
+      <div id="sub-container" >
+        <div class="zoom-button-grid">
+          <button class="position-top" id="button_ZoomIn" onclick="moveCamera('1')">+</button>
+          <button class="position-bottom" id="button_ZoomOut" onclick="moveCamera('0')">-</button>
+        </div>
+      </div>
+    </div>
+    <!-- <link rel="stylesheet" href="/static/css/main.css">
+    <script src="../js/three.min.js"></script>
+    <script src="../js/controls/MapControls.js"></script>
+    <script src="../js/controls/CustomOrbitControls.js"></script>
+    <script src="../js/controls/DragControls.js"></script>
+    <script src="../js/panorama.js"></script>
+    <script src="../js/ImagePosition.js"></script>
+    <script src="../js/ImageManager.js"></script>
+    <script src="../js/MapRender.js"></script>
+    <script src="../js/arrowManager.js"></script>
+    <script src="../js/ArrowRender.js"></script> -->
+    <script>
+      // //Python側で取得した写真の接続情報リスト
+      // image_information = {{image_information|tojson}};
+      // //ファイル名リスト
+      // file_name_list = {{filelist|tojson}};
+      
+      // let map_canvas = document.getElementById( "sub-container" );
+      // let side_pain = document.getElementById( "side-pain" );
+
+      // //イメージ情報
+      // let imagePosition = new ImagePosition( false, 1 );
+      // let imageManager = new ImageManager( image_information, file_name_list );
+      
+      // // PanoramaViewオブジェクトを生成
+      // let panoView = new PanoramaView( 180, 0, 90, [0,360], [-90, 90], [5, 120] );
+      // //Map初期化
+      // // let map = new MapRender( image_information, map_canvas, panoView );
+
+      // // 映像描画エレメントを取得してDIVエレメントに追加する
+      // document.getElementById( 'container' ).appendChild( panoView.getDomElement() );
+      // // アニメーションをスタートする
+      // panoView.start();
+
+      // // カメラのズームイン/アウト処理
+      // function cameraZoom( arg ) {
+      //   map.operationCamera( parseInt( arg ) );
+      // }
+      // // カメラのズームイン/アウト/処理
+      // function moveCamera( arg ) {
+      //   panoView.moveCamera( arg );
+      // }
+    
+      // //右ペインの表示切替
+      // function displayPain() {
+      //   if ( side_pain.style.display === "none" ) {
+      //     side_pain.style.display = "block";
+      //   } else {
+      //     side_pain.style.display = "none";
+      //   }
+      // }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Menu</title>
+    <link href="../css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="sidepain">
+      <ul id="link_list">
+        <li><a onclick="sendMessage('streetview.html')">Map Make</a></li>
+        <li><a onclick="sendMessage('map.html')">Street View</a></li>
+      </ul>
+      <button onclick="sendMessage('map.html')"> aaaa </button>
+    </div>
+    <div class="main">
+    </div>
+    <script>
+      const { ipcRenderer } = require('electron');
+      const link_list = document.getElementById( 'map_edit' );
+
+      const button_click = () => {
+        ipcRenderer.send('message', 'ping')
+        ipcRenderer.on('reply', (event, arg) => {
+          console.log(arg)
+        })
+      }
+
+    </script>
+  </body>
+</html>
